@@ -43,8 +43,6 @@ void flash_print_info(flash_info_t *info)
 }
 ```
 
-flash_print_info：
-
 第一步：if查看info->flash_id，也就是看看是不是一个闪存，不是就退出，是就继续
 
 > #define FLASH_TYPEMASK	0x0000FFFF	/* extract FLASH type	information	\*/
