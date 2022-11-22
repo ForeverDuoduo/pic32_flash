@@ -40,20 +40,18 @@
 
 
 
-```c
-flash_initiate_operation	√
-flash_wait_till_busy			
-flash_complete_operation	√
-flash_erase								√
-page_erase								
-write_word								
-write_buff								√
-flash_print_info					√
-flash_init								√
-pic32_flash_bank_init			√
-pic32_flash_probe					√
-
-pic32_flash_ids						
-pic32_flash								
-```
-
+> | 函数名                   | 名           | 状态 |
+> | ------------------------ | ------------ | ---- |
+> | flash_initiate_operation | 寄存器解锁   | √    |
+> | flash_wait_till_busy     |              |      |
+> | flash_complete_operation | 控制寄存器   | √    |
+> | flash_erase              | 程序闪存擦除 | √    |
+> | page_erase               |              |      |
+> | write_word               |              |      |
+> | write_buff               |              | √    |
+> | flash_print_info         |              | √    |
+> | flash_init               |              | √    |
+> | pic32_flash_bank_init    |              | √    |
+> | pic32_flash_probe        |              | √    |
+> | pic32_flash_ids          |              |      |
+> | pic32_flash              |              |      |
