@@ -71,9 +71,7 @@ static int pic32_flash_probe(struct udevice *dev)
 
 
 
-
-
-> ```c
+> ```
 > 	for (idx = 0, info = &flash_info[0]; list < end;) {
 > 		addr = fdt_translate_address((void *)blob, node, cell + idx);
 > 		size = fdt_addr_to_cpu(cell[idx + addrc]);
