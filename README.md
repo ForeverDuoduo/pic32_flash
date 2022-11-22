@@ -22,3 +22,38 @@
 >
 > ERR_UNKNOWN_FLASH_VENDOR：不正确的闪存信息
 
+```c
+/*-----------------------------------------------------------------------
+ * return codes from flash_write():
+ */
+#define ERR_OK				0
+#define ERR_TIMOUT			1
+#define ERR_NOT_ERASED			2
+#define ERR_PROTECTED			4
+#define ERR_INVAL			8
+#define ERR_ALIGN			16
+#define ERR_UNKNOWN_FLASH_VENDOR	32
+#define ERR_UNKNOWN_FLASH_TYPE		64
+#define ERR_PROG_ERROR			128
+#define ERR_ABORTED			256
+```
+
+
+
+```c
+flash_initiate_operation	√
+flash_wait_till_busy			
+flash_complete_operation	√
+flash_erase								√
+page_erase								
+write_word								
+write_buff								√
+flash_print_info					√
+flash_init								√
+pic32_flash_bank_init			√
+pic32_flash_probe					√
+
+pic32_flash_ids						
+pic32_flash								
+```
+
