@@ -13,13 +13,17 @@ unsigned long flash_init(void)
 		/* nop */
 	}
 
-	/* calc total flash size */
+	/* calc total flash size */ //计算所有闪存的大小和并作为结果返回
 	for (bank = 0; bank < CONFIG_SYS_MAX_FLASH_BANKS; ++bank)
 		size += flash_info[bank].size;
 
 	return size;
 }
 ```
+
+
+
+
 
 > ```c
 > /* probe every MTD device */
