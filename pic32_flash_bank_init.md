@@ -23,6 +23,10 @@ static void pic32_flash_bank_init(flash_info_t *info,
 }
 ```
 
+
+
+
+
 初始化flash_bank入参为flash_info_t *info闪存信息，ulong base，ulong size容量
 
 > #define FLASH_MAN_MCHP	0x02000000	/* Microchip Technology		*/
