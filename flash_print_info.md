@@ -5,12 +5,12 @@ void flash_print_info(flash_info_t *info)
 {
 	int i;
 
-	if (info->flash_id == FLASH_UNKNOWN) {
-		printf("missing or unknown FLASH type\n");
+	if (info->flash_id == FLASH_UNKNOWN) {//检查是否是未知类型的参数
+		printf("missing or unknown FLASH type\n");//识别失败打印警告并返回
 		return;
 	}
 
-	switch (info->flash_id & FLASH_VENDMASK) {
+	switch (info->flash_id & FLASH_VENDMASK) {//打印芯片的出厂公司
 	case FLASH_MAN_MCHP:
 		printf("Microchip Technology ");
 		break;
@@ -19,7 +19,7 @@ void flash_print_info(flash_info_t *info)
 		break;
 	}
 
-	switch (info->flash_id & FLASH_TYPEMASK) {
+	switch (info->flash_id & FLASH_TYPEMASK) {//打印闪存的型号
 	case FLASH_MCHP100T:
 		printf("Internal (8 Mbit, 64 x 16k)\n");
 		break;
@@ -28,10 +28,10 @@ void flash_print_info(flash_info_t *info)
 		break;
 	}
 
-	printf("  Size: %ld MB in %d Sectors\n",
+	printf("  Size: %ld MB in %d Sectors\n",//打印总存储容量
 	       info->size >> 20, info->sector_count);
 
-	printf("  Sector Start Addresses:");
+	printf("  Sector Start Addresses:");//打印各闪存的起始地址
 	for (i = 0; i < info->sector_count; ++i) {
 		if ((i % 5) == 0)
 			printf("\n   ");
@@ -39,7 +39,7 @@ void flash_print_info(flash_info_t *info)
 		printf(" %08lX%s", info->start[i],
 		       info->protect[i] ? " (RO)" : "     ");
 	}
-	printf("\n");
+	printf("\n");//结束
 }
 ```
 
