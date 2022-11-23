@@ -6,6 +6,8 @@
 
 **flash：闪存**
 
+**NAND：与非门电路**
+
 **u32：unsigned int 32位宽**
 
 
@@ -43,14 +45,14 @@
 > | 函数名                   | 名                            | 状态 |
 > | ------------------------ | ----------------------------- | ---- |
 > | flash_initiate_operation | 寄存器解锁                    | √    |
-> | flash_wait_till_busy     |                               |      |
+> | flash_wait_till_busy     | 询问是否忙/超时               | √    |
 > | flash_complete_operation | 控制寄存器                    | √    |
 > | flash_erase              | 程序闪存擦除                  | √    |
-> | page_erase               |                               |      |
+> | page_erase               | 页擦除（但是return 0）        | √    |
 > | write_word               | 向闪存内写入一字节数据/字编程 | √    |
 > | write_buff               | 向闪存内写入一段数据/4字编程  | √    |
-> | flash_print_info         |                               | √    |
-> | flash_init               |                               | √    |
+> | flash_print_info         | 打印设备信息                  | √    |
+> | flash_init               | 计算所有闪存大小和            | √    |
 > | pic32_flash_bank_init    |                               | √    |
 > | pic32_flash_probe        |                               | √    |
 > | pic32_flash_ids          |                               |      |
