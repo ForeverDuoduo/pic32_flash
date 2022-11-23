@@ -40,18 +40,18 @@
 
 
 
-> | 函数名                   | 名                     | 状态 |
-> | ------------------------ | ---------------------- | ---- |
-> | flash_initiate_operation | 寄存器解锁             | √    |
-> | flash_wait_till_busy     |                        |      |
-> | flash_complete_operation | 控制寄存器             | √    |
-> | flash_erase              | 程序闪存擦除           | √    |
-> | page_erase               |                        |      |
-> | write_word               | 向闪存内写入一字节数据 | √    |
-> | write_buff               | 向闪存内写入一段数据   | √    |
-> | flash_print_info         |                        | √    |
-> | flash_init               |                        | √    |
-> | pic32_flash_bank_init    |                        | √    |
-> | pic32_flash_probe        |                        | √    |
-> | pic32_flash_ids          |                        |      |
-> | pic32_flash              |                        |      |
+> | 函数名                   | 名                            | 状态 |
+> | ------------------------ | ----------------------------- | ---- |
+> | flash_initiate_operation | 寄存器解锁                    | √    |
+> | flash_wait_till_busy     |                               |      |
+> | flash_complete_operation | 控制寄存器                    | √    |
+> | flash_erase              | 程序闪存擦除                  | √    |
+> | page_erase               |                               |      |
+> | write_word               | 向闪存内写入一字节数据/字编程 | √    |
+> | write_buff               | 向闪存内写入一段数据/4字编程  | √    |
+> | flash_print_info         |                               | √    |
+> | flash_init               |                               | √    |
+> | pic32_flash_bank_init    |                               | √    |
+> | pic32_flash_probe        |                               | √    |
+> | pic32_flash_ids          |                               |      |
+> | pic32_flash              |                               |      |
