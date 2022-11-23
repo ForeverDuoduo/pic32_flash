@@ -68,7 +68,7 @@ int flash_erase(flash_info_t *info, int s_first, int s_last)
 		 * flash content is updated but cache might contain stale 
 		 * data, so invalidate dcache.
 		 * //flash已跟新，但可能缓存过时
-         * //因此缓存失效 
+		 * //因此缓存失效 
 		 */
 		sect_end = info->start[sect] + info->size / info->sector_count;
 		invalidate_dcache_range(info->start[sect], sect_end);
