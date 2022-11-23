@@ -40,6 +40,29 @@
 #define ERR_ABORTED			256
 ```
 
+```c
+/* NVM operations */
+#define NVMOP_NOP		0
+#define NVMOP_WORD_WRITE	1
+#define NVMOP_PAGE_ERASE	4
+
+/* NVM control bits */
+#define NVM_WR			BIT(15)
+#define NVM_WREN		BIT(14)
+#define NVM_WRERR		BIT(13)
+#define NVM_LVDERR		BIT(12)
+
+/* NVM programming unlock register */
+#define LOCK_KEY		0x0
+#define UNLOCK_KEY1		0xaa996655
+#define UNLOCK_KEY2		0x556699aa
+
+```
+
+
+
+
+
 
 
 > | 函数名                   | 名                                      | 状态 |
