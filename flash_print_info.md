@@ -65,4 +65,4 @@ void flash_print_info(flash_info_t *info)
 > printf("  Size: %ld MB in %d Sectors\n",
 > 	info->size >> 20, info->sector_count);
 
-第五步：告知Sector的起始地址
+第五步：告知每个扇区的起始地址
