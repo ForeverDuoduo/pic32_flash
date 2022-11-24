@@ -60,7 +60,7 @@ static int pic32_flash_probe(struct udevice *dev)
 		      CONFIG_ENV_ADDR,
 		      CONFIG_ENV_ADDR + CONFIG_ENV_SECT_SIZE - 1,
 		      &flash_info[0]);
-#endif
+#endif 
 	return 0;
 }
 ```
