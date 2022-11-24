@@ -12,14 +12,17 @@ static inline void flash_initiate_operation(u32 nvmop)
 	/* unlock sequence */
 	writel(LOCK_KEY, &nvm_regs_p->key.raw);
 	writel(UNLOCK_KEY1, &nvm_regs_p->key.raw);
-	writel(UNLOCK_KEY2, &nvm_regs_p->key.raw);//将解锁序列依次写入nvm_regs_p->key
+	writel(UNLOCK_KEY2, &nvm_regs_p->key.raw);
+	//将解锁序列依次写入nvm_regs_p->key
 
 	/* initiate operation */
 	writel(NVM_WR, &nvm_regs_p->ctrl.set);
 }
 ```
 
+启动 NVM 操作 (解锁序列示例)
 
+>   一旦解锁代码已写入 NVMKEY 寄存器，与闪存控制器在同一外设总线的下一个活动 将复位锁定。最终，仅可以使用原子操作。使用结构设置寄存器位域会编译为读 - 修 改 - 写操作，导致失败。
 
 > ```
 > NVMOP<3:0>:NVM 操作位
