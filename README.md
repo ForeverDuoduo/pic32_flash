@@ -25,20 +25,19 @@
 > ERR_UNKNOWN_FLASH_VENDOR：不正确的闪存信息
 
 ```c
-/*-----------------------------------------------------------------------
- * return codes from flash_write():
- */
-#define ERR_OK				0
-#define ERR_TIMOUT			1
-#define ERR_NOT_ERASED			2
-#define ERR_PROTECTED			4
-#define ERR_INVAL			8
-#define ERR_ALIGN			16
-#define ERR_UNKNOWN_FLASH_VENDOR	32
-#define ERR_UNKNOWN_FLASH_TYPE		64
-#define ERR_PROG_ERROR			128
-#define ERR_ABORTED			256
+#define ERR_OK			没有错误
+#define ERR_TIMOUT		超时
+#define ERR_NOT_ERASED	擦除错误
+#define ERR_PROTECTED	被保护
+#define ERR_INVAL		无效
+#define ERR_ALIGN		对齐错误
+#define ERR_UNKNOWN_FLASH_VENDOR	接触屏蔽
+#define ERR_UNKNOWN_FLASH_TYPE		类型错误
+#define ERR_PROG_ERROR		掠夺错误
+#define ERR_ABORTED			中止错误
 ```
+
+>   1.没有错误 2.超时错误 3.没有擦除错误 4.被保护的错误 5.无效错误 6.错误对齐 7.接触屏蔽 8. 错误类型 9.掠夺错误 10.中止错误
 
 ```c
 /* NVM operations */
